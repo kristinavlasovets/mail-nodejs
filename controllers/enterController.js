@@ -18,6 +18,18 @@ class EnterController {
 			res.status(400).json({message: 'Enter error'});
 		}
 	}
+
+	async getUser(req, res) {
+		try {
+			const {userId} = req.params;
+			const user = await User.findOne({userId});
+
+			return res.json(user);
+		} catch (e) {
+			console.log(e);
+		}
+	}
+
 	async getUsers(req, res) {
 		try {
 			const users = await User.find();
