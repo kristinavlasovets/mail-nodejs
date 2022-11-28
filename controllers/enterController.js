@@ -22,7 +22,7 @@ class EnterController {
 	async getUser(req, res) {
 		try {
 			const {userId} = req.params;
-			const user = await User.findOne({userId});
+			const user = await User.findOne({_id: userId});
 
 			return res.json(user);
 		} catch (e) {

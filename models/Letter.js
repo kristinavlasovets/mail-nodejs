@@ -7,11 +7,18 @@ const Letter = new Schema({
 	sender: {
 		type: String,
 	},
+	receiver: {
+		type: String,
+	},
 	subject: {
 		type: String,
 	},
 	text: {
 		type: String,
+	},
+	sendTime: {
+		type: Date,
+		default: Date.now,
 	},
 });
 
