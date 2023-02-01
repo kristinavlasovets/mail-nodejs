@@ -9,6 +9,7 @@ class LetterController {
 			res.status(500).json(e);
 		}
 	}
+
 	async getLetter(req, res) {
 		try {
 			const letter = await Letter.find({
@@ -19,6 +20,7 @@ class LetterController {
 			res.status(500).json(e);
 		}
 	}
+
 	async getLetters(req, res) {
 		try {
 			const letters = await Letter.find();

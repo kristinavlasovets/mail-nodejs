@@ -21,6 +21,7 @@ class ConversationController {
 			res.status(500).json({message: 'error'});
 		}
 	}
+
 	async getConversation(req, res) {
 		try {
 			const conversation = await Conversation.find({
